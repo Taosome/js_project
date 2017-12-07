@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>核对订单信息</title>
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="/css/order.css">
+</head>
+<body>
+	<div id="header"></div>
+	
+	<div id="order">
+		<div id="ck_order_tit" class="clear">
+			<span id="cot_txt">核对订单信息</span>
+			<ul id="cart_flow" class="clear">
+				<li id="c_f_img"></li>
+				<li class="c_f_li">1.我的购物车</li>
+				<li class="c_f_li c_f_li_cur">2.填写核对订单信息</li>
+				<li class="c_f_li">3.成功提交订单</li>
+			</ul>
+		</div>
+		<ul id="order_info">
+			<li id="order_info_tit">订单信息</li>
+			<li class="bt_bd">
+				<div id="consignee"><span>收货人信息</span></div>
+				<div id="addrTo" class="clear">
+					<div id="addrMess" class="add_block adbk_cur1">
+						<p class="ad_p1">
+							<span class="at_ssq">
+								<label id="add_province">北京</label>
+								<label id="add_city">北京</label>
+							</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;(
+								<span id="add_receiver">尼古拉斯</span>
+								&nbsp;收)
+							</span>
+						</p>
+						<p class="ad_p2">
+							<label id="add_district">朝阳区</label>
+							<label id="add_detail">路口</label>
+							<span class="at_pon" id="add_mobile">13123456789</span>
+						</p>
+						<a class="at_upd" href="javascript:void(0)">修改</a>
+						<a class="at_del" href="javascript:void(0)">删除</a>
+						<div class="at_duigou at_show"></div>
+					</div>
+					<div class="add_new_block adbk_cur2">
+						<div class="new_adds"></div>
+					</div>
+				</div>
+			</li>
+			<li id="pay">
+				<div id="pay_fs">支付方式：</div>
+				<ul>
+					<li class="df_li clear">
+						<input id="yezf" name="zffs" checked="checked" type="radio">
+						<label for="yezf">账户支付</label>
+						<ul id="pay_password">
+							<li>支付密码：</li>
+							<li id="p_pd_li">
+								<input name="password" maxlength="16" type="password">
+							</li>
+							<li>
+								<a href="javascript:void(0)" target="_blank">忘记支付密码？</a>
+							</li>
+						</ul>
+						<span style="color:red; margin: 0px 12px 0px 30px;">您的余额不足</span>
+						<a href="javascript:void(0)">请点击充值&gt;&gt;</a>
+					</li>
+					<li class="df_li">
+						<input id="zfbzf" name="zffs" type="radio">
+						<label for="zfbzf">支付宝支付</label>
+					</li>
+					<li class="df_li">
+						<input id="wxzf" name="zffs" type="radio">
+						<label for="wxzf">微信支付</label>
+					</li>
+				</ul>
+			</li>
+			<li class="qj_li">
+				<ul class="clear">
+					<li class="qwshsj">期望收货时间：</li>
+					<li class="qj_inp">
+						<input name="receiveTime" class="Wdate" type="date" >
+					</li>
+					<li class="qwshsj">&nbsp;&nbsp;&nbsp;&nbsp;</li>
+					<li style="color: red;line-height: 40px;float: left;">友情提示：当天下午2点前下单可于第二天收货，2点后下单延后一天收货！
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul id="confirm_order_tit" class="clear">
+			<li id="cft_txt">确认订单信息</li>
+			<li id="cft_a"><a href="/html/cart.html">返回修改购物车</a></li>
+		</ul>
+		<ul id="cf_order_tit" class="clear">
+			<li id="cot_tol">小计（元）</li>
+			<li id="cot_num">数量</li>
+			<li id="cot_price">单价（元）</li>
+			<li id="cot_mprice">市场价（元）</li>
+		</ul>
+		<ul id="cf_order_con">
+
+		</ul>
+		<ul class="od_cost clear">
+			<li style="float: right; margin-right: 32px;">￥0.00</li>
+			<li style="float: right;">运费：</li>
+		</ul>
+		<ul class="od_cost clear">
+			<li style="float: right; margin-right: 32px;" id="discountByCoupon">-￥0.00</li>
+			<li style="float: right;">优惠券：</li>
+		</ul>
+		<ul id="cf_order_ft">
+			<li><a id="submit_od" href="javascript:void(0);">提交订单</a></li>
+			<li id="cfof_total">￥0.00</li>
+			<li id="cfof_total_tit">合计（不含运费）</li>
+			<li id="cfof_slt">已选商品<span>1</span>件</li>
+		</ul>
+	</div>
+	<script type="text/html" id="order_template">
+		{{each products as product}}
+		<li>
+			<ul class="cfoc_od_info clear">
+				<input type="hidden" class="id" value="{{product.id}}"/>
+				<li class="coi_img"><img src="{{product.img}}"></li>
+				<li class="coi_title">{{product.title}}</li>
+				<li class="oti_price">{{product.price}}</li>
+				<li class="coi_price">{{product.price}}</li>
+				<li class="coi_num">{{product.amount}}</li>
+				<li class="coi_sub">{{(product.price*product.amount).toFixed(2)}}</li>
+			</ul>
+		</li>
+		{{/each}}
+	</script>
+	<div id="footer"></div>
+	<script src="/lib/requirejs/require.js" data-main="/js/order.js"></script>
+</body>
+</html>

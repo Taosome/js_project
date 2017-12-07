@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<style type="text/css">
+		.product {
+			width:300px;
+			height:300px;
+			border:1px solid #ccc;
+			border-radius: 5px;
+			line-height: 30px;
+			margin:10px;
+			float:left;
+			padding: 10px;
+		}
+		.product .add_to_cart {
+			width:200px;
+			cursor: pointer;
+			border:1px solid #666;
+			border-radius: 3px;
+			text-align: center;
+		}
+
+		.cart .header_title div, .cart .row div {
+			width:150px;
+			height:30px;
+			line-height: 30px;
+			float: left;
+			border: 1px solid;
+			overflow: hidden;
+		}
+
+		.cart, .cart .header_title, .cart .row, .cart .cart_body {
+			clear:both;
+		}
+
+		.cart_body .row .minus,.cart_body .row .add {
+			width:20px;
+			height: 25px;
+			border: 1px solid;
+			display:inline-block;
+			text-align: center;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<div>购物车</div>
+	<div class="cart">
+		<div class="header_title">
+			<div class="ck"><label><input type="checkbox" id="ck_all">全选</label></div>
+			<div class="img">图片</div>
+			<div class="name">标题</div>
+			<div class="price">价格</div>
+			<div class="amount">数量</div>
+			<div class="sub">小计</div>
+			<div class="oper">操作</div>
+		</div>
+		<div class="cart_body">
+			
+		</div>
+
+		<div class="foot" style="clear: both;">
+			合计：<span id="total">0.00</span>
+		</div>
+	</div>
+
+	<script type="text/html" id="cart_template">
+		{{each products as prod}}
+		<div class="row">
+			<input type="hidden" class="id" value="{{prod.id}}" />
+			<div class="ck"><input type="checkbox" class="ck_prod"></div>
+			<div class="img"><img src="{{prod.img}}"></div>
+			<div class="title">{{prod.title}}</div>
+			<div class="price">{{prod.price}}</div>
+			<div class="amount"><span class="minus">-</span><input type="text" class="amount_val" value="{{prod.amount}}" size="1"><span class="add">+</span></div>
+			<div class="sub">{{(prod.price*prod.amount).toFixed(2)}}</div>
+			<div class="oper"><a class="del" href="javascript:void(0);">删除</a></div>
+		</div>
+		{{/each}}
+	</script>
+
+
+	<div style="clear: both;">猜你喜欢：</div>
+	
+	<div class="buy">
+		<div class="product">
+			<input type="hidden" value="5" class="id">
+			<div class="img"><img src="images/5.jpg"></div>
+			<div class="title">三只松鼠_碧根果210gx2袋零食坚果炒货山核桃长寿果干果奶油味</div>
+			<div class="price">38.90</div>
+			<div class="add_to_cart">加入购物车</div>
+		</div>
+
+		<div class="product">
+			<input type="hidden" value="6" class="id">
+			<div class="img"><img src="images/6.jpg"></div>
+			<div class="title">奥克斯（AUX）正1.5匹 冷暖 定速 空调挂机(KFR-35GW/HFJ+3)</div>
+			<div class="price">1799.00</div>
+			<div class="add_to_cart">加入购物车</div>
+		</div>
+
+		<div class="product">
+			<input type="hidden" value="7" class="id">
+			<div class="img"><img src="images/7.jpg"></div>
+			<div class="title">乐事（Lay’s）无限薯片 休闲零食 104g*3组合装（原味+烤肉+番茄）新</div>
+			<div class="price">19.99</div>
+			<div class="add_to_cart">加入购物车</div>
+		</div>
+
+		<div class="product">
+			<input type="hidden" value="8" class="id">
+			<div class="img"><img src="images/8.jpg"></div>
+			<div class="title">福临门 东北优质 大米 8kg</div>
+			<div class="price">49.00</div>
+			<div class="add_to_cart">加入购物车</div>
+		</div>
+	</div>
+
+	<script src="lib/jquery/jquery-1.12.4.min.js"></script>
+	<script src="lib/jquery_plugins/jquery.cookie.js"></script>
+	<script src="lib/arttemplate/template.js"></script>
+	<script src="js/cart.js"></script>
+</body>
+</html>

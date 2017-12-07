@@ -1,0 +1,354 @@
+#order {
+    width: 1200px;
+    margin: auto;
+    padding: 150px 0 40px 0;
+}
+#cot_txt {
+    color: #999;
+    float: left;
+    font-size: 28px;
+    margin-left: 8px;
+}
+#cart_flow {
+    float: right;
+    width: 483px;
+}
+#cart_flow li {
+    float: left;
+    font-size: 14px;
+    color: #888;
+}
+#cart_flow .c_f_li {
+    width: 160px;
+    text-align: center;
+    padding: 10px 0px;
+}
+#cart_flow .c_f_li_cur {
+    color: #ff9900;
+}
+#cart_flow #c_f_img {
+    background: url("../images/index.png") no-repeat 0px -303px;
+    height: 23px;
+    width: 483px;
+}
+#order_info {
+    border: solid 1px #ddd;
+}
+#order_info_tit {
+    height: 35px;
+    line-height: 35px;
+    background: #f7f7f7;
+    text-indent: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: solid 1px #ddd;
+}
+#order_info .bt_bd {
+    border-bottom: solid 1px #ddd;
+}
+#consignee {
+    margin: 15px 0px 10px 20px;
+}
+#consignee span {
+    font-size: 14px;
+    font-weight: bold;
+}
+#addrTo {
+    width: 1200px;
+    margin-left: 4px;
+    color: #666;
+}
+.add_block {
+    position: relative;
+    width: 207px;
+    height: 80px;
+    float: left;
+    font-size: 12px;
+    padding: 13px 15px;
+    margin: 0px 6px 12px 6px;
+    cursor: pointer;
+}
+.adbk_cur1, .add_block:hover {
+    background: url("../images/xf_01.png");
+}
+.ad_p1 {
+    border-bottom: solid 1px #f2f2f2;
+    padding-bottom: 4px;
+    position: relative;
+}
+.ad_p2 {
+    padding-top: 4px;
+    word-break: break-all;
+    height: 34px;
+    overflow: hidden;
+    position: relative;
+}
+.at_upd {
+    color: #005aa4;
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    bottom: 14px;
+}
+.at_del {
+    color: #005aa4;
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+    left: 55px;
+    bottom: 14px;
+}
+.at_duigou {
+    width: 34px;
+    height: 34px;
+    background: url("../images/inner.png") no-repeat -67px -31px;
+    position: absolute;
+    right: 0px;
+    bottom: 1px;
+    display: none;
+}
+.at_show {
+    display: block;
+}
+.add_new_block {
+    position: relative;
+    width: 207px;
+    height: 80px;
+    float: left;
+    font-size: 12px;
+    padding: 13px 15px;
+    margin: 0px 6px 12px 6px;
+    cursor: pointer;
+}
+.adbk_cur2 {
+    background: url("../images/xf_02.png");
+}
+.new_adds {
+    width: 74px;
+    height: 74px;
+    background: url("../images/inner.png") no-repeat -26px -68px;
+    margin: auto;
+    margin-top: 3px;
+}
+#pay {
+    font-size: 12px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ccc;
+}
+#pay_fs {
+    margin: 15px 0px 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#pay ul {
+    margin-left: 82px;
+}
+.df_li {
+    margin-left: 18px;
+}
+#pay li {
+    margin-bottom: 6px;
+    height: 30px;
+    line-height: 30px;
+}
+.df_li #yezf, .df_li #zfbzf, .df_li #wxzf {
+    position: relative;
+    top: 10px;
+    margin-right: 2px;
+    float: left;
+}
+.df_li label {
+    float: left;
+}
+.df_li a {
+    color: #3f658c;
+}
+#pay #pay_password {
+    float: left;
+    margin: 0px;
+    margin-left: 15px;
+    height: 30px;
+}
+#pay_password li {
+    float: left;
+    font-size: 12px;
+    color: #666;
+}
+#pay_password li input {
+    border: solid 1px #ddd;
+    padding: 3px 5px;
+    width: 106px;
+    margin-left: 6px;
+    outline: none;
+}
+#pay_password li a {
+    color: #336699;
+    margin-left: 6px;
+}
+.qj_li {
+    padding: 10px 0px;
+}
+.qwshsj {
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    margin-left: 15px;
+    line-height: 40px;
+}
+.qj_inp {
+    float: left;
+    line-height: 40px;
+}
+.qj_inp input {
+    border: 1px solid #ddd;
+    padding: 3px 5px;
+    width: 160px;
+}
+.Wdate {
+    border: #999 1px solid;
+    height: 20px;
+    background: #fff url("../images/datePicker.gif") no-repeat right;
+}
+#confirm_order_tit {
+    height: 35px;
+    border: solid 1px #ddd;
+    background: #f7f7f7;
+    margin-top: 20px;
+}
+#cft_txt {
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 10px;
+}
+#cft_a {
+    float: right;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    margin-right: 24px;
+}
+#cft_a a {
+    color: red;
+}
+#cf_order_tit {
+    height: 50px;
+    line-height: 50px;
+}
+#cf_order_tit li {
+    float: right;
+    font-size: 14px;
+    width: 176px;
+    text-align: center;
+    color: #666;
+}
+#cf_order_con {
+    border: solid 1px #ede8d8;
+    background: #fbfcff;
+    padding: 10px 0px;
+}
+#cf_order_con li {
+    border-bottom: dashed 1px #ede8d8;
+}
+.cfoc_od_info li {
+    float: left;
+    height: 148px;
+    line-height: 148px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+.coi_img {
+    width: 170px;
+    position: relative;
+}
+.coi_img img {
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    display: block;
+    background: #ccc;
+    margin-left: 55px;
+    width: 100px;
+    height: 100px;
+}
+.cfoc_od_info .coi_title {
+    width: 312px;
+    text-align: left;
+    text-indent: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.oti_price {
+    width: 195px;
+}
+.coi_price {
+    width: 200px;
+}
+.coi_num {
+    width: 155px;
+}
+.cfoc_od_info .coi_sub {
+    width: 166px;
+    color: #fc461e;
+    font-weight: bold;
+    font-size: 16px;
+}
+#cot_tol {
+    width: 168px;
+}
+#cot_num {
+    width: 158px;
+}
+#cot_price {
+    width: 188px;
+}
+#cot_mprice {
+    width: 205px;
+}
+.od_cost {
+    font-size: 12px;
+    color: #666;
+    margin: 10px 0px;
+}
+#cf_order_ft {
+    height: 60px;
+    line-height: 60px;
+    background: #f7f7f7;
+}
+#cf_order_ft li {
+    float: right;
+}
+#submit_od {
+    display: block;
+    width: 146px;
+    background: #e51e13;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 18px;
+}
+#cf_order_ft li {
+    float: right;
+}
+#cfof_total {
+    padding: 0px 25px;
+    color: #fc461e;
+    font-size: 18px;
+    font-weight: bold;
+}
+#cfof_total_tit {
+    font-size: 14px;
+    padding-left: 70px;
+    color: #666;
+}
+#cfof_slt {
+    font-size: 14px;
+    color: #666;
+}

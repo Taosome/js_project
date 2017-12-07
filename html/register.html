@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/nav.css">
+	<link rel="stylesheet" type="text/css" href="/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="/css/register.css">
+	<link rel="stylesheet" type="text/css" href="/css/login.css">
+</head>
+<body>
+	<div id="header"></div>
+	<div id="nav"></div>
+	<div id="logdiv"></div>
+	<div id="regist_div_back" style="background-image: url('/images/test_cm.jpg'); background-size: 100% auto; height: 1200px;">
+	<ul id="regist" class="clear">
+		<li id="r_con" style="margin-left: 39%;">
+			<form id="registForm" method="post">
+				<input value="1" name="memberType" type="hidden">
+				<input name="unencryptedPwd" type="hidden">				
+				<table>
+					<tbody>
+						<tr style="text-align: center;font-size: 20px;">
+							<td colspan="2" style="text-align: center;">用户注册
+							</td>
+						</tr>
+					<tr>
+						<td class="td_fs">
+							<span class="r_star">*</span>用户名：
+						</td>
+						<td class="td_required">
+							<input class="r_ipt required" id="r_mb_num" name="mobile" maxlength="16" type="text">
+						</td>
+					</tr>
+					<tr>
+						<td class="td_fs">
+							<span class="r_star">*</span>密码：
+						</td>
+						<td class="td_required">
+							<input class="r_ipt required" id="r_mb_key" name="password" maxlength="18" type="password">
+						</td>
+					</tr>
+					<tr>
+						<td class="td_fs">
+							<span class="r_star">*</span>手机验证：
+						</td>
+						<td>
+							<input id="r_cod" class="required" name="mobileCode" maxlength="11" type="text">
+							<a id="r_cod_a" href="javascript:void(0);">获取短信验证码</a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<p>
+								<input name="isRead" id="inp_read" type="checkbox">我已阅读并同意
+								<a href="javascript:void(0)" class="r_log_a">《果酷用户注册协议》
+								</a>
+							</p>
+							<p id="r_last_p">已经是果酷会员？
+								<a id="dlogin" class="r_log_a" href="javascript:void(0);">立即登录
+								</a>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><a id="reg_btn" href="javascript:;" style="background: rgb(229, 30, 19) none repeat scroll 0% 0%;">立即注册</a></td>
+					</tr>
+				</tbody></table>
+			</form>
+		</li>
+	</ul>
+</div>
+	<div id="footer"></div>
+	<script src="/lib/requirejs/require.js" data-main="/js/register"></script>
+</body>
+</html>

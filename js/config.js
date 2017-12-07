@@ -1,0 +1,26 @@
+require.config({
+	baseUrl:"/",
+	paths:{
+		"jquery":"lib/jquery/jquery-1.12.4.min",
+		"cookie":"lib/jquery_plugins/jquery.cookie",
+		"load":"js/loadall",
+		"zoom" : "lib/jquery_plugins/jquery.elevateZoom-2.2.3.min",
+		"coursel":"lib/jquery_plugins/jquery.mkinfinite",
+		"fly":"/lib/jquery_plugins/jquery.fly.min",
+		"temp":"/lib/arttemplate/template"
+	},
+	shim:{
+		"zoom":{
+			deps:["jquery"]
+		},
+		"coursel":{
+			deps:["jquery"]
+		},
+		"fly":{
+			deps:["jquery"]
+		},
+		"temp":{
+			deps:["jquery"]
+		}
+	}
+});

@@ -1,0 +1,38 @@
+
+	<div id="logdiv_tit">
+		<a id="account_login">账号密码登录</a><span style="margin: 0 10px;color: #ddd;">|</span>
+		<a id="logdiv_tit_a" href="javascript:;"></a>
+		<a id="phone_login">手机验证码登录</a>
+	</div>
+	<!-- 账号密码登录 -->
+	<ul id="logul">
+		<li class="logul_li">用户名/已验证手机</li>
+		<li class="ll_p"><input id="log_name" value="" maxlength="20" type="text"></li>
+		<li class="logul_li">密码</li>
+		<li class="ll_p"><input id="log_pwd" maxlength="16" type="password"></li>
+		<li>
+			<ul id="logul_ul" class="clear">
+				<li style="padding-right: 35px; color: #005aa4;"><a href="/account/resetPwd1.htm" style="color: #005aa4;">忘记密码？</a></li>
+				<li><a href="/html/register.html" style="color: #005aa4;">点击注册</a></li>
+			</ul>
+		</li>
+		<li><input id="denglu" value="登&nbsp;&nbsp;录" type="button"></li>
+	</ul>
+	<!-- 手机验证码登录 -->
+	<ul id="phone_log" style="display: none;">
+		<li class="logul_li">已验证手机</li>
+		<li class="ll_p"><input id="phone_name" value="" maxlength="20" type="text"></li>
+		<li class="logul_li">
+			<div class="drag"><div class="drag_bg"></div><div class="drag_text" onselectstart="return false;" unselectable="on">拖动滑块验证</div><div class="handler handler_bg"></div></div>
+			<input id="phone_var" type="hidden">
+		</li>
+		<li class="logul_li">验证码</li>
+		<li class="ll_p"><input id="phone_pwd" maxlength="16" type="text"><a id="phone_click" href="javascript:;">获取短信验证码</a></li>
+		<li>
+			<ul id="logul_ul" class="clear">
+				<li style="padding-right: 35px; color: #005aa4;"><a href="/account/resetPwd1.htm" style="color: #005aa4;">忘记密码？</a></li>
+				<li><a href="/html/register.html" style="color: #005aa4;">点击注册</a></li>
+			</ul>
+		</li>
+		<li><input id="phone_denglu" value="登&nbsp;&nbsp;录" type="button"></li>
+	</ul>

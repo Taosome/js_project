@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的购物车</title>
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="/css/cart.css">
+</head>
+<body>
+	<div id="header"></div>
+	<div id="cart">
+		<div id="cart_tit" class="clear">
+			<span id="cart_tit_txt">我的购物车</span>
+			<ul id="cart_flow" class="clear">
+				<li id="c_f_img"></li>
+				<li class="c_f_li c_f_li_cur">1.我的购物车</li>
+				<li class="c_f_li">2.填写核对订单信息</li>
+				<li class="c_f_li">3.成功提交订单</li>
+			</ul>
+			<ul id="cart_th" class="clear">
+				<li id="ct_inp"><input name="all" checked="checked" type="checkbox"></li>
+				<li id="ct_all">全选</li>
+				<li id="ct_name">商品信息</li>
+				<li id="ct_sj">市场价（元）</li>
+				<li id="ct_dj">单价（元）</li>
+				<li id="ct_sl">数量</li>
+				<li id="ct_je">金额（元）</li>
+				<li id="ct_op">操作</li>
+			</ul>
+			<ul id="cart_con">
+			</ul>
+			<ul id="cart_tf" class="clear">
+				<li id="ctf_inp"><input name="all" checked="checked" type="checkbox"></li>
+				<li id="ctf_all">全选</li>
+				<li>
+					<a href="javascript:;" class="hover_a">删除</a>
+				</li>
+				<li class="ctf_r">
+					<a id="ctf_js" href="javascript:void(0);">结算</a>
+				</li>
+				<li class="ctf_r" id="total">
+					￥0.00
+				</li>
+				<li class="ctf_r" style="padding-left: 75px;">总计（不含运费）
+				</li>
+				<li class="ctf_r">
+					已选商品<span id="count">0</span>件
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/html" id="cart_template">
+		{{each products as product}}
+		<li class="cart_con_li">
+			<ul class="cart_obj clear">
+				<input type="hidden" class="id" value="{{product.id}}"/>
+				<li class="co_inp"><input type="checkbox"></li>
+				<li class="co_img"><img src="{{product.img}}"></li>
+				<li class="co_title">{{product.title}}</li>
+				<li class="ot_price">{{product.price}}</li>
+				<li class="co_price">{{product.price}}</li>
+				<li class="co_sl"><span><span class="minus">-</span><input type="text" class="amount_val" value="{{product.amount}}" size="1"><span class="add">+</span></span></li>
+				<li class="co_sub">{{(product.price*product.amount).toFixed(2)}}</li>
+				<li class="co_del"><a class="del" href="javascript:void(0);">删除</a></li>
+			</ul>
+		</li>
+		{{/each}}
+	</script>
+	<div style="height: 30px;"></div>
+	<div id="footer"></div>
+	<script src="/lib/requirejs/require.js" data-main="/js/cart.js"></script>
+</body>
+</html>

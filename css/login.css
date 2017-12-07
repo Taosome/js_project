@@ -1,0 +1,82 @@
+#logdiv {
+    width: 410px;
+    height: 334px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -167px;
+    margin-left: -205px;
+    background: #fff;
+    border: solid 1px #c4c4c4;
+    z-index: 99999;
+    display: none;
+}
+#logdiv_tit {
+    height: 31px;
+    font-size: 12px;
+    line-height: 31px;
+    font-weight: bold;
+    text-indent: 10px;
+    background: #f5f5f5;
+}
+a {
+    color: #666;
+    cursor: pointer;
+    outline: 0 none;
+    text-decoration: none;
+}
+#logdiv_tit_a {
+    float: right;
+    width: 23px;
+    height: 23px;
+    background: url("../images/index.png") no-repeat 0px -72px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+#logul {
+    font-size: 12px;
+    width: 270px;
+    margin: auto;
+    margin-top: 35px;
+}
+.logul_li {
+    color: #c0c0c0;
+    margin-bottom: 5px;
+}
+.ll_p {
+    position: relative;
+}
+#log_name {
+    width: 233px;
+    padding: 6px 30px 6px 5px;
+    border: solid 1px #e1e1e1;
+    background: url("../images/index.png") no-repeat 241px -96px;
+    margin-bottom: 8px;
+    outline: none;
+}
+#log_pwd {
+    width: 233px;
+    padding: 6px 30px 6px 5px;
+    border: solid 1px #e1e1e1;
+    background: url(../images/index.png) no-repeat 242px -125px;
+    outline: none;
+}
+#logul_ul {
+    padding: 12px 0px;
+}
+#logul_ul li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+#denglu {
+    width: 270px;
+    height: 35px;
+    border: 0px;
+    border-top: solid 1px #f7c47b;
+    border-bottom: solid 1px #f7c47b;
+    background: #e51e13;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
